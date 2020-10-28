@@ -19,8 +19,6 @@
 #include <string>
 #include <vector>
 
-#include <boost/core/noncopyable.hpp>
-
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
@@ -32,7 +30,6 @@ namespace freetype {
 
 
   class FaceLoader
-    : private boost::noncopyable
   {
   public:
 
@@ -56,6 +53,8 @@ namespace freetype {
     FaceLoader()
       : tarreader( files ) {}
 
+    FaceLoader(const FaceLoader&) = delete;
+    FaceLoader& operator=(const FaceLoader&) = delete;
 
     // @Description:
     //   Set the supported font format / font driver.  This face loader will

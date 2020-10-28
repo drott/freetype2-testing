@@ -18,8 +18,6 @@
 
 #include <cstdint>
 
-#include <boost/core/noncopyable.hpp>
-
 #include <ft2build.h>
 #include FT_FREETYPE_H
 #include <freetype/internal/ftobjs.h>
@@ -29,13 +27,14 @@ namespace freetype {
 
 
   class FuzzTarget
-    : private boost::noncopyable
   {
   public:
 
 
     virtual
     ~FuzzTarget();
+    FuzzTarget(const FuzzTarget&) = delete;
+    FuzzTarget& operator=(const FuzzTarget&) = delete;
 
 
     virtual void

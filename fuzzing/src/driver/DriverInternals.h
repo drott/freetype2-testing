@@ -20,19 +20,19 @@
 #include <unordered_map>
 #include <vector>
 
-#include <boost/core/noncopyable.hpp>
-
 
 namespace freetype {
 
 
   class DriverInternals
-    : private boost::noncopyable
   {
   public:
 
 
     DriverInternals();
+
+    DriverInternals(const DriverInternals&) = delete;
+    DriverInternals& operator=(const DriverInternals&) = delete;
 
 
     bool

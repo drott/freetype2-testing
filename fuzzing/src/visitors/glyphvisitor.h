@@ -18,14 +18,10 @@
 
 #include "utils/utils.h"
 
-#include <boost/core/noncopyable.hpp>
-
-
 namespace freetype {
 
 
   class GlyphVisitor
-    : private boost::noncopyable
   {
   public:
 
@@ -33,6 +29,8 @@ namespace freetype {
     virtual
     ~GlyphVisitor() = default;
 
+    GlyphVisitor(const GlyphVisitor&) = delete;
+    GlyphVisitor& operator=(const GlyphVisitor&) = delete;
 
     // @Description:
     //   Run an arbitrary action on a glyph.

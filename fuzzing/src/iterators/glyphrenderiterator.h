@@ -19,8 +19,6 @@
 #include <memory> // std::unique_ptr
 #include <vector>
 
-#include <boost/core/noncopyable.hpp>
-
 #include "utils/utils.h"
 #include "visitors/glyphvisitor.h"
 
@@ -29,13 +27,15 @@ namespace freetype {
 
 
   class GlyphRenderIterator
-    : private boost::noncopyable
   {
   public:
 
 
     virtual
     ~GlyphRenderIterator() = default;
+
+    GlyphRenderIterator(const GlyphRenderIterator&) = delete;
+    GlyphRenderIterator& operator=(const GlyphRenderIterator&) = delete;
 
 
     virtual void

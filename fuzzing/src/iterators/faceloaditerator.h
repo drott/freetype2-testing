@@ -18,8 +18,6 @@
 
 #include <memory> // std::unique_ptr
 
-#include <boost/core/noncopyable.hpp>
-
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
@@ -33,13 +31,14 @@ namespace freetype {
 
 
   class FaceLoadIterator
-    : private boost::noncopyable
   {
   public:
 
-    
     FaceLoadIterator()
       : face_loader( new FaceLoader ) {}
+
+    FaceLoadIterator(const FaceLoadIterator&) = delete;
+    FaceLoadIterator& operator=(const FaceLoadIterator&) = delete;
 
 
     // @See: FaceLoader::set_supported_font_format

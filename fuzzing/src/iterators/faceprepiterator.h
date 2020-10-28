@@ -18,8 +18,6 @@
 
 #include <memory> // std::unique_ptr
 
-#include <boost/core/noncopyable.hpp>
-
 #include "iterators/glyphloaditerator.h"
 #include "utils/faceloader.h"
 #include "utils/utils.h"
@@ -30,13 +28,16 @@ namespace freetype {
 
 
   class FacePrepIterator
-    : private boost::noncopyable
   {
   public:
 
 
     virtual
     ~FacePrepIterator() = default;
+
+    FacePrepIterator() = default;
+    FacePrepIterator(const FacePrepIterator&) = delete;
+    FacePrepIterator& operator=(const FacePrepIterator&) = delete;
 
 
     // @Description:

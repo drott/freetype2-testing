@@ -18,8 +18,6 @@
 
 #include <cstdint>
 
-#include <boost/core/noncopyable.hpp>
-
 #include <ft2build.h>
 #include FT_FREETYPE_H
 #include <freetype/internal/ftstream.h>
@@ -29,7 +27,6 @@ namespace freetype {
 
 
   class FreeTypeStream
-    : private boost::noncopyable
   {
   public:
 
@@ -40,6 +37,9 @@ namespace freetype {
     FreeTypeStream( FT_Memory       memory,
                     const FT_Byte*  base,
                     FT_ULong        size );
+
+    FreeTypeStream(const FreeTypeStream&) = delete;
+    FreeTypeStream& operator=(const FreeTypeStream&) = delete;
 
 
     virtual

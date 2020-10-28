@@ -18,8 +18,6 @@
 #include <memory> // std::unique_ptr
 #include <vector>
 
-#include <boost/core/noncopyable.hpp>
-
 #include "iterators/glyphrenderiterator.h"
 #include "utils/utils.h"
 #include "visitors/glyphvisitor.h"
@@ -29,7 +27,6 @@ namespace freetype {
 
 
   class GlyphLoadIterator
-    : private boost::noncopyable
   {
   public:
 
@@ -37,6 +34,9 @@ namespace freetype {
     // @See: `GlyphLoadIterator::set_num_load_glyphs()'.
 
     GlyphLoadIterator( FT_Long  num_load_glyphs );
+
+    GlyphLoadIterator(const GlyphLoadIterator&) = delete;
+    GlyphLoadIterator& operator=(const GlyphLoadIterator&) = delete;
 
 
     virtual
