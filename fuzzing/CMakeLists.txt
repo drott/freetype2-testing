@@ -253,7 +253,6 @@ endif()
 
 include_directories(
   "${FREETYPE_BASE_DIR}/include"
-  "${BOOST_BASE_DIR}"
   "${FUZZING_SRC_DIR}"
   "${LIBARCHIVE_BASE_DIR}/libarchive")
 
