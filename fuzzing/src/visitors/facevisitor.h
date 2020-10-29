@@ -35,8 +35,8 @@ namespace freetype {
     virtual
     ~FaceVisitor() = default;
 
-    FaceVisitor(const FaceVisitor&) = delete;
-    FaceVisitor& operator=(const FaceVisitor&) = delete;
+    FaceVisitor( const FaceVisitor& ) = delete;
+    FaceVisitor& operator=( const FaceVisitor& ) = delete;
 
     // @Description:
     //   Run an arbitrary action on a face.

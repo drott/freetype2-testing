@@ -31,11 +31,13 @@ namespace freetype {
   public:
 
 
+    GlyphRenderIterator() = default;
+
     virtual
     ~GlyphRenderIterator() = default;
 
-    GlyphRenderIterator(const GlyphRenderIterator&) = delete;
-    GlyphRenderIterator& operator=(const GlyphRenderIterator&) = delete;
+    GlyphRenderIterator( const GlyphRenderIterator& ) = delete;
+    GlyphRenderIterator& operator=( const GlyphRenderIterator& ) = delete;
 
 
     virtual void

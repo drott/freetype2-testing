@@ -38,8 +38,8 @@ namespace freetype {
                     const FT_Byte*  base,
                     FT_ULong        size );
 
-    FreeTypeStream(const FreeTypeStream&) = delete;
-    FreeTypeStream& operator=(const FreeTypeStream&) = delete;
+    FreeTypeStream( const FreeTypeStream& ) = delete;
+    FreeTypeStream& operator=( const FreeTypeStream& ) = delete;
 
 
     virtual

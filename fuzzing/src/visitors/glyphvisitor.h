@@ -29,8 +29,9 @@ namespace freetype {
     virtual
     ~GlyphVisitor() = default;
 
-    GlyphVisitor(const GlyphVisitor&) = delete;
-    GlyphVisitor& operator=(const GlyphVisitor&) = delete;
+    GlyphVisitor() = default;
+    GlyphVisitor( const GlyphVisitor& ) = delete;
+    GlyphVisitor& operator=( const GlyphVisitor& ) = delete;
 
     // @Description:
     //   Run an arbitrary action on a glyph.

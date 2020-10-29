@@ -34,9 +34,10 @@ namespace freetype {
     // @See: `GlyphLoadIterator::set_num_load_glyphs()'.
 
     GlyphLoadIterator( FT_Long  num_load_glyphs );
+    GlyphLoadIterator() = default;
 
-    GlyphLoadIterator(const GlyphLoadIterator&) = delete;
-    GlyphLoadIterator& operator=(const GlyphLoadIterator&) = delete;
+    GlyphLoadIterator( const GlyphLoadIterator& ) = delete;
+    GlyphLoadIterator& operator=( const GlyphLoadIterator& ) = delete;
 
 
     virtual

@@ -36,8 +36,8 @@ namespace freetype {
     ~FacePrepIterator() = default;
 
     FacePrepIterator() = default;
-    FacePrepIterator(const FacePrepIterator&) = delete;
-    FacePrepIterator& operator=(const FacePrepIterator&) = delete;
+    FacePrepIterator( const FacePrepIterator& ) = delete;
+    FacePrepIterator& operator=( const FacePrepIterator& ) = delete;
 
 
     // @Description:

@@ -53,8 +53,8 @@ namespace freetype {
     FaceLoader()
       : tarreader( files ) {}
 
-    FaceLoader(const FaceLoader&) = delete;
-    FaceLoader& operator=(const FaceLoader&) = delete;
+    FaceLoader( const FaceLoader& ) = delete;
+    FaceLoader& operator=( const FaceLoader& ) = delete;
 
     // @Description:
     //   Set the supported font format / font driver.  This face loader will

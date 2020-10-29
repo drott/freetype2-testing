@@ -39,6 +39,10 @@ namespace freetype {
     TarReader( Files&  files )
       : files(files) {}
 
+    TarReader() = default;
+    TarReader( const TarReader& ) = delete;
+    TarReader& operator=( const TarReader& ) = delete;
+
 
     bool
     extract_data( const uint8_t*  data,

@@ -37,8 +37,8 @@ namespace freetype {
     FaceLoadIterator()
       : face_loader( new FaceLoader ) {}
 
-    FaceLoadIterator(const FaceLoadIterator&) = delete;
-    FaceLoadIterator& operator=(const FaceLoadIterator&) = delete;
+    FaceLoadIterator( const FaceLoadIterator& ) = delete;
+    FaceLoadIterator& operator=( const FaceLoadIterator& ) = delete;
 
 
     // @See: FaceLoader::set_supported_font_format

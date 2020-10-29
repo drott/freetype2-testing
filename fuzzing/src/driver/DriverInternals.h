@@ -31,8 +31,8 @@ namespace freetype {
 
     DriverInternals();
 
-    DriverInternals(const DriverInternals&) = delete;
-    DriverInternals& operator=(const DriverInternals&) = delete;
+    DriverInternals( const DriverInternals& ) = delete;
+    DriverInternals& operator=( const DriverInternals& ) = delete;
 
 
     bool

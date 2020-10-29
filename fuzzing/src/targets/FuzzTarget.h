@@ -33,8 +33,8 @@ namespace freetype {
 
     virtual
     ~FuzzTarget();
-    FuzzTarget(const FuzzTarget&) = delete;
-    FuzzTarget& operator=(const FuzzTarget&) = delete;
+    FuzzTarget( const FuzzTarget& ) = delete;
+    FuzzTarget& operator=( const FuzzTarget& ) = delete;
 
 
     virtual void
