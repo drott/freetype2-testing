@@ -28,22 +28,18 @@
 
 #include <memory>
 
-#ifdef HAVE_LIBARCHIVE
-#include <archive.h>
-#endif
-
 #include <ft2build.h>
 #include FT_FREETYPE_H
 #include FT_GLYPH_H
 
 
+
+
 namespace freetype
 {
 
-#ifdef HAVE_LIBARCHIVE
   typedef std::unique_ptr<struct archive,
-                          decltype( archive_read_free )*>  Unique_Archive;
-#endif
+                          int(*)(struct archive*) >  Unique_Archive;
 
   typedef std::unique_ptr<FT_FaceRec,
                           decltype( FT_Done_Face )*>  Unique_FT_Face;
