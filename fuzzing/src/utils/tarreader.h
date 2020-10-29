@@ -39,7 +39,7 @@ namespace freetype {
     TarReader( Files&  files )
       : files(files) {}
 
-    TarReader() = default;
+    TarReader() = delete;
     TarReader( const TarReader& ) = delete;
     TarReader& operator=( const TarReader& ) = delete;
 
