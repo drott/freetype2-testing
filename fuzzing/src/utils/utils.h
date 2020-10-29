@@ -33,13 +33,13 @@
 #include FT_GLYPH_H
 
 
-
+struct archive;
 
 namespace freetype
 {
 
-  typedef std::unique_ptr<struct archive,
-                          int(*)(struct archive*) >  Unique_Archive;
+  typedef std::unique_ptr<archive,
+                          int(*)(archive*) >  Unique_Archive;
 
   typedef std::unique_ptr<FT_FaceRec,
                           decltype( FT_Done_Face )*>  Unique_FT_Face;
